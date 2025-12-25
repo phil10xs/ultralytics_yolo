@@ -1,0 +1,18 @@
+name: flutter_yolo_realtime
+description: Real-time YOLO11 object detection (Flutter + Native Kotlin/Swift)
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+ sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # ultralytics_yolo: ^0.1.42
+  permission_handler: ^11.3.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/
