@@ -4,9 +4,6 @@ venv/
 ENV/
 .env/
 
-# VS Code (optional)
-.vscode/
-
 # macOS junk (optional)
 .DS_Store
 

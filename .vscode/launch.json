@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter: Run (sync models first)",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "flutter_yolo_realtime",
+      "program": "lib/main.dart",
+      "preLaunchTask": "Sync YOLO models (Android + iOS)"
+    },
+    {
+      "name": "Flutter: Run (models already synced)",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "flutter_yolo_realtime",
+      "program": "lib/main.dart"
+    }
+  ]
+}

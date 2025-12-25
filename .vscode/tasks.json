@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sync YOLO models (Android + iOS)",
+      "type": "shell",
+      "command": "bash tools/sync_models.sh",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
