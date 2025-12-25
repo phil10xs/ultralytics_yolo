@@ -1,0 +1,30 @@
+# ----------------------------
+# Core Ultralytics + PyTorch
+# ----------------------------
+ultralytics==8.3.240
+torch==2.2.2
+torchvision
+torchaudio
+
+# ----------------------------
+# TensorFlow export stack
+# ----------------------------
+tensorflow==2.16.2
+tf-keras
+numpy==1.26.4
+
+# ----------------------------
+# ONNX → TF → TFLite pipeline
+# ----------------------------
+onnx==1.15.0
+onnx2tf
+onnx_graphsurgeon==0.5.8
+sng4onnx==1.0.4
+ml-dtypes==0.3.2
+protobuf==4.25.3
+
+# ----------------------------
+# Required by Ultralytics import
+# (NumPy<2 compatible version)
+# ----------------------------
+opencv-python==4.7.0.72

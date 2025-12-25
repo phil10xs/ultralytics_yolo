@@ -1,0 +1,18 @@
+# Python venvs
+.venv/
+venv/
+ENV/
+.env/
+
+# VS Code (optional)
+.vscode/
+
+# macOS junk (optional)
+.DS_Store
+
+# Ultralytics models folder(s)
+ultralytics_models/
+ultralytics_model/
+ultralytics_model*/      # covers ultralytics_model, ultralytics_model_foo, etc.
+**/ultralytics_models/
+**/ultralytics_model*/
