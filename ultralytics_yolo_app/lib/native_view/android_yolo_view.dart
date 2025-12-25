@@ -10,7 +10,7 @@ class AndroidYoloViewPage extends StatefulWidget {
 }
 
 class _AndroidYoloViewPageState extends State<AndroidYoloViewPage> {
-  late final Future<bool> _ready;
+  late Future<bool> _ready;
 
   @override
   void initState() {
@@ -19,6 +19,10 @@ class _AndroidYoloViewPageState extends State<AndroidYoloViewPage> {
   }
 
   Future<bool> _ensureCameraPermission() async {
+    // If already granted, don't re-prompt
+    final current = await Permission.camera.status;
+    if (current.isGranted) return true;
+
     final status = await Permission.camera.request();
     return status.isGranted;
   }
@@ -36,11 +40,13 @@ class _AndroidYoloViewPageState extends State<AndroidYoloViewPage> {
       body: FutureBuilder<bool>(
         future: _ready,
         builder: (context, snap) {
-          if (!snap.hasData) {
+          if (snap.connectionState != ConnectionState.done) {
             return const Center(child: CircularProgressIndicator());
           }
 
-          if (snap.data != true) {
+          final granted = snap.data == true;
+
+          if (!granted) {
             return Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -49,19 +55,27 @@ class _AndroidYoloViewPageState extends State<AndroidYoloViewPage> {
                   const SizedBox(height: 12),
                   ElevatedButton(
                     onPressed: () async {
-                      await openAppSettings();
+                      // Re-request first (this will show dialog if eligible)
+                      final status = await Permission.camera.request();
+
+                      // If permanently denied, send them to Settings
+                      if (status.isPermanentlyDenied) {
+                        await openAppSettings();
+                      }
+
                       if (!mounted) return;
                       setState(() {
                         _ready = _ensureCameraPermission();
                       });
                     },
-                    child: const Text('Open Settings'),
-                  )
+                    child: const Text('Grant Permission'),
+                  ),
                 ],
               ),
             );
           }
 
+          // Native view only when permission is granted
           return const AndroidView(
             viewType: 'native_kotlin_yolo_view',
             creationParamsCodec: StandardMessageCodec(),

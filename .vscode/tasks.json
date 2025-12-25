@@ -4,9 +4,14 @@
     {
       "label": "Sync YOLO models (Android + iOS)",
       "type": "shell",
-      "command": "bash tools/sync_models.sh",
+      "command": "bash",
+      "args": ["${workspaceFolder}/sync_models.sh"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": "build",
       "problemMatcher": []
     }
   ]
 }
+

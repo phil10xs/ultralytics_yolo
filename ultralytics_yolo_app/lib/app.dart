@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_yolo_realtime/home_page.dart';
+import 'package:ultralytics_yolo_app/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

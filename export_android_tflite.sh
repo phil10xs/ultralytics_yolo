@@ -5,8 +5,8 @@ MODEL="yolo11n.pt"
 IMG_SIZE=640
 
 CANONICAL_DIR="../assets/models/android"
-KOTLIN_ASSETS_DIR="../flutter_yolo_realtime/android/app/src/main/assets/models"
-FLUTTER_ASSETS_DIR="../flutter_yolo_realtime/assets/models"
+KOTLIN_ASSETS_DIR="../ultralytics_yolo_app/android/app/src/main/assets/models"
+FLUTTER_ASSETS_DIR="../ultralytics_yolo_app/assets/models"
 
 [ -f "$MODEL" ] || { echo "Missing $MODEL. Run from ultralytics_models/"; exit 1; }
 command -v yolo >/dev/null 2>&1 || { echo "yolo CLI not found"; exit 1; }

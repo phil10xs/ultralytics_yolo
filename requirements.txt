@@ -17,7 +17,7 @@ numpy==1.26.4
 # ONNX → TF → TFLite pipeline
 # ----------------------------
 onnx==1.15.0
-onnx2tf
+onnx2tf==1.22.3
 onnx_graphsurgeon==0.5.8
 sng4onnx==1.0.4
 ml-dtypes==0.3.2

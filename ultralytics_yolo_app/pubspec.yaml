@@ -1,4 +1,4 @@
-name: flutter_yolo_realtime
+name: ultralytics_yolo_app
 description: Real-time YOLO11 object detection (Flutter + Native Kotlin/Swift)
 publish_to: 'none'
 version: 0.1.0

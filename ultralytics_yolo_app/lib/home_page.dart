@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_yolo_realtime/dart/camera_stub_page.dart';
-import 'package:flutter_yolo_realtime/native_view/android_yolo_view.dart';
-import 'package:flutter_yolo_realtime/native_view/ios_yolo_view.dart';
+import 'package:ultralytics_yolo_app/dart/camera_stub_page.dart';
+import 'package:ultralytics_yolo_app/native_view/android_yolo_view.dart';
+import 'package:ultralytics_yolo_app/native_view/ios_yolo_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

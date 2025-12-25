@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // keep whatever Flutter template already has here (if any)
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,14 +15,17 @@ allprojects {
     }
 }
 
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
+// Optional: keep build output in a single shared /build folder
+def newBuildDir = rootProject.layout.buildDirectory.dir("../../build").get()
+rootProject.layout.buildDirectory.set(newBuildDir)
+
+subprojects { subproject ->
+    def newSubprojectBuildDir = newBuildDir.dir(subproject.name)
+    subproject.layout.buildDirectory.set(newSubprojectBuildDir)
+
+    subproject.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    delete rootProject.layout.buildDirectory
 }

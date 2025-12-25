@@ -5,7 +5,7 @@ MODEL="yolo11n.pt"
 IMG_SIZE=640
 
 CANONICAL_DIR="../assets/models/ios"
-RUNNER_DIR="../flutter_yolo_realtime/ios/Runner"
+RUNNER_DIR="../ultralytics_yolo_app/ios/Runner"
 
 # Preconditions
 [ -f "$MODEL" ] || { echo "Missing $MODEL. Run from ultralytics_models/"; exit 1; }
