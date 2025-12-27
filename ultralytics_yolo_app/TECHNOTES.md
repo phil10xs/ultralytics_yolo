@@ -1,5 +1,5 @@
 # TECHNOTES002 — Flutter + Native (Kotlin/Swift) Real-time YOLO11
-Here’s a tightened but more technical version that explains how each goal is achieved, while staying brief and naming the key frameworks 👇
+Here’s a tightened but more technical version that explains how each goal is achieved, while staying brief and naming the key frameworks 
 
 
 # Architecture & execution model

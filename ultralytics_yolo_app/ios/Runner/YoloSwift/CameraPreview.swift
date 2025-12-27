@@ -8,9 +8,6 @@
 import SwiftUI
 import AVFoundation
 
-import SwiftUI
-import AVFoundation
-
 struct CameraPreview: UIViewRepresentable {
     let session: AVCaptureSession
 
