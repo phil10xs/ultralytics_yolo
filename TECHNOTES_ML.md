@@ -62,5 +62,3 @@ Assessors should run via VS Code Run or execute the sync task first.
 	•	Native Kotlin and Swift accessed only through the Flutter bridge
 
 ⸻
-
-If you want, I can compress this into a one-paragraph assessor summary or a README “Architecture” section.

@@ -1,6 +1,5 @@
 # TECHNOTES002 — Flutter + Native (Kotlin/Swift) Real-time YOLO11
-Here’s a tightened but more technical version that explains how each goal is achieved, while staying brief and naming the key frameworks 
-
+Technical Note that explains how each goal is achieved, while staying brief and naming the key frameworks 
 
 # Architecture & execution model
 	•	3 execution paths: Flutter (bridge), Native Android (Kotlin), Native iOS (Swift) to validate parity across stacks.
